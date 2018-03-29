@@ -54,7 +54,7 @@ export default {
     bottom: 0;
     top: 0;
     margin: auto;
-    width: 500px;
+    width: 515px;
     height: 200px;
     left: 0;
     right: 0;
@@ -72,8 +72,8 @@ h1 {
 
 body {
   /* background-image: url("https://image.ibb.co/j75Tpn/bg.jpg"); */
-  /* background-repeat: no-repeat;
-  background-size: cover; */
+  background-repeat: no-repeat; 
+  background-size: cover; 
   background: linear-gradient(to top, #136a8a, #267871);
   
   overflow: hidden;
