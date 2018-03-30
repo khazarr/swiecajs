@@ -9,7 +9,7 @@
       <TheSocials />
     </div>
        <vue-particles
-        v-if="!isMobile"
+       class="particles"
         color="#dedede"
         :particleOpacity="0.7"
         :particlesNumber="80"
@@ -55,6 +55,9 @@ export default {
 </script>
 
 <style>
+.particles {
+  height: 100vh;
+}
 .main-view {
   display: block;
   max-height: 100vh;
@@ -115,5 +118,7 @@ body {
     margin-bottom: 0px;
     font-size: 38px;
 }
+
+
 
 </style>
