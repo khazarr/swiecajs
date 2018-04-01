@@ -3,9 +3,10 @@
   <div class="title-container">
       <h1 class="title">
         swieca
-          <img class="js-logo img-fluid" src="/JavaScript-logo.png">
+          <!-- <img class="js-logo img-fluid" src="/JavaScript-logo.png"> -->
       </h1>
       <p>Web Developer</p>
+      <TheCube v-if="$mq !== 'mobile'" />
       <TheSocials />
     </div>
        <vue-particles
@@ -35,21 +36,15 @@
 
 <script>
 import TheSocials from 'components/TheSocials'
+import TheCube from 'components/TheCube'
 export default {
   components: {
-    TheSocials
+    TheSocials,
+    TheCube
   },
   mounted() {
-    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    console.log('width: ' + window.innerWidth)
-    console.log('ismobile:' + this.isMobile)
-    console.log(window.matchMedia("(max-width: 770px)").matches)
-    console.log(window.matchMedia("(max-width: 770px)"))
   },
   computed: {
-    isMobile () {
-      return window.matchMedia("(max-width: 770px)").matches ? true : false
-    } 
   }
 };
 </script>
@@ -72,7 +67,7 @@ export default {
   right: 0;
   width: 60%;
   height: 60%;
-  min-width: 500px;
+  min-width: 800px;
   max-width: 800px;
   text-align: center;
   max-height: 800px;
@@ -105,9 +100,11 @@ body {
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
   display: block;
   font-weight: 700;
-  font-size: 100px;
+  font-size: 85px;
   color: #fff;
   text-shadow: 8px 8px #000;
+  margin-right: 170px;
+  margin-top: 25%;
 }
 
 .title-container p {
